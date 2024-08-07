@@ -1,7 +1,20 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-export const connectDB = async ()=>{
-    await mongoose.connect('mongodb+srv://ayush123:ayush123@cluster0.0qfkn2u.mongodb.net/Food-Del').then(()=>{
-        console.log("DB connected");
-    })
-}
+// Load environment variables from .env file
+dotenv.config();
+
+// Access the MONGO_ID from the environment variables
+const mongoUri = process.env.MONGO_ID;
+
+export const connectDB = async () => {
+  try {
+    await mongoose.connect(mongoUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("DB connected");
+  } catch (error) {
+    console.error("DB connection error:", error);
+  }
+};

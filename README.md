@@ -28,12 +28,6 @@ This app allows users to browse available restaurants, select food items, and pl
 - An **Admin Dashboard** is provided for restaurant management, where admins can add, update, and delete food items and manage orders.
 - Admins can view user activity, order history, and generate reports for data analysis.
 
-### 5. **CI/CD Pipeline**
-- Set up Jenkins to automate the build, testing, and deployment process to ensure continuous integration and continuous delivery.
-
-### 6. **AWS S3 Integration**
-- Static assets (images, logos, etc.) are stored and served from an AWS S3 bucket, optimizing performance and scalability.
-
 ---
 
 ## Installation
@@ -43,8 +37,6 @@ Make sure you have the following installed on your system:
 
 - Node.js and npm (Node Package Manager)
 - MongoDB instance (local or MongoDB Atlas)
-- AWS CLI (for AWS integration)
-- Jenkins (if you are setting up CI/CD)
 
 ### 1. **Clone the repository**
 
@@ -68,7 +60,6 @@ npm install
 ### 3. **Configuration**
 
 Set up environment variables for JWT secret and database connection in .env file in the backend directory.
-Configure AWS S3 bucket for image hosting.
 
 ### 4. **Run the application locally**
 Start the backend server:
@@ -83,18 +74,6 @@ Start the frontend server:
 cd frontend
 npm start
 ```
----
-
-## CI/CD Pipeline Setup
-The project uses GitHub Actions for automating the build, testing, and deployment process.
-
-### 1. **Build and Deploy with GitHub Actions**
-The `build-and-deploy.yml` file is configured for automating:
-
-Build: Compiling the frontend and backend code.
-Deploy: Deploying the frontend to AWS S3 bucket and backend to a hosting platform.
-GitHub Actions will run on push events to the `main` branch, automating the deployment process.
-
 ---
 
 ## Upcoming Features
@@ -126,7 +105,7 @@ Enable push notifications for users when their orders are confirmed, dispatched,
 
 ## Conclusion
 
-The **Food Delivery Application** offers a seamless user experience with features like secure authentication, an intuitive food catalog, and an admin dashboard for easy management. Built with React.js, Node.js, and MongoDB, it ensures scalability and performance. The integration of GitHub Actions and AWS S3 optimizes the development and deployment process.
+The **Food Delivery Application** offers a seamless user experience with features like secure authentication, an intuitive food catalog, and an admin dashboard for easy management. Built with React.js, Node.js, and MongoDB, it ensures scalability and performance. 
 
 With upcoming features like payment gateway integration, shortest delivery distance algorithms, and real-time order tracking, this app is set to provide even more value to both users and admins.
 
